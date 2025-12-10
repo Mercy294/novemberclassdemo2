@@ -1,0 +1,14 @@
+name: Tests
+on: [push]
+
+jobs:
+  mercy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+      - name: run install dependencies
+        run: npm install
+      - name: run Tests
+        run: npm test
+        
